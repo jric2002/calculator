@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+/* General */
+:root {
+  --black-color: #000000;
+  --gray-color: #22252d;
+  --green-color: #98ca3f;
+  --yellow-color: #fcee0a;
+  --sky-blue-color: #2490fc;
+  --red-color: #f00;
+  --white-color: #ffffff;
+  --color-opacity-black: rgba(0, 0, 0, 0.25);
+  --color-opacity-white: rgba(255, 255, 255, 0.25);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./typography/Roboto/Roboto-Light.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #1a1a1a;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Calculator */
+.calculator {
+  width: 350px;
+  background-color: var(--gray-color);
+  color: var(--white-color);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2rem auto;
+}
+/** Name **/
+.calculator .name {
+  font-size: 28px;
+  margin: 0.25rem 0;
+}
+/** Number box **/
+.calculator .number-box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--color-opacity-black);
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+.calculator .number-box .numbers {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0.75rem;
+}
+/** Buttons **/
+.calculator .buttons {
+  background-color: var(--color-opacity-black);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin: 0.25rem 0;
+}
+.calculator .buttons div {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--color-opacity-black);
+  text-align: center;
+  border-radius: 10px;
+  padding: 1.25rem;
+  transform: scale(1, 1);
+  transition: background-color 0.25s linear;
+}
+.calculator .buttons div:hover {
+  background-color: var(--color-opacity-white);
+}
+.calculator .buttons .number-seven {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.calculator .buttons .number-eight {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.calculator .buttons .number-nine {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+.calculator .buttons .del {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  background-color: var(--green-color);
+}
+.calculator .buttons .number-four {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.calculator .buttons .number-five {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.calculator .buttons .number-six {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+.calculator .buttons .add {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+.calculator .buttons .number-one {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+.calculator .buttons .number-two {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+.calculator .buttons .number-three {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+.calculator .buttons .subtract {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+.calculator .buttons .point {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+.calculator .buttons .number-zero {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+.calculator .buttons .divide {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+.calculator .buttons .multiply {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+}
+.calculator .buttons .reset {
+  grid-column: 1 / 3;
+  grid-row: 5 / 6;
+  background-color: var(--green-color);
+}
+.calculator .buttons .equal {
+  grid-column: 3 / 5;
+  grid-row: 5 / 6;
+  background-color: var(--red-color);
+}
